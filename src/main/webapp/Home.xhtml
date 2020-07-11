@@ -6,12 +6,31 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="Hello, world"/>
-</f:view>
-<h1>JSF Atualizado!</h1>
-<h:form>
-    <p:outputLabel value="Primefaces funcionanddo legal"/>
-    <p:commandButton value="Testa o Controller" action="#{testeController.teste()}"/>
-</h:form>
+    <h:head>
+    </h:head>
+
+    <h:body>
+        <h1>JSF Atualizado!</h1>
+        <h:form>
+            <p:outputLabel value="Primefaces funcionanddo legal"/>
+            <p:commandButton value="Testa o Controller" action="#{testeController.teste()}" style="margin-right:20px;" styleClass="ui-priority-primary"/>
+        </h:form>
+        <p:dataTable>
+            <p:column headerText="Id">
+                <h:outputText value="Identificação" />
+            </p:column>
+
+            <p:column headerText="Year">
+                <h:outputText value="Ano" />
+            </p:column>
+
+            <p:column headerText="Brand">
+                <h:outputText value="Placa" />
+            </p:column>
+
+            <p:column headerText="Color">
+                <h:outputText value="cor" />
+            </p:column>
+        </p:dataTable>
+    </h:body>
 </html>
